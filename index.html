@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Vincent Agana, a KNUST Diploma in Information Technology student, digital entrepreneur and web development learner in Ghana.">
+    <meta name="theme-color" content="#173f35">
+    <title>Vincent Agana | IT Student & Digital Entrepreneur</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem("portfolio-theme");
+            if (savedTheme === "dark") {
+                document.documentElement.setAttribute("data-theme", "dark");
+            }
+        })();
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container nav-row">
+            <a class="brand" href="#home" aria-label="Vincent Agana home">
+                <span class="brand-mark">VA</span>
+                <span>Vincent Agana</span>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#timeline">Journey</a>
+                <a href="#ventures">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch colour theme">
+                <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+                </svg>
+                <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section id="home" class="hero">
+            <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+            <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">KNUST Diploma in Information Technology Student</p>
+                    <h1>Building digital ideas that connect <span>technology, commerce and community.</span></h1>
+                    <p class="hero-text">
+                        I am Vincent Agana, an IT student and digital entrepreneur in Ghana. I combine web development,
+                        e-commerce operations and local product sourcing to create practical solutions with real-world value.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#ventures">View My Projects</a>
+                        <a class="btn btn-ghost" href="mailto:agansvince@gmail.com">Contact Me</a>
+                    </div>
+
+                    <div class="social-row" aria-label="Social links">
+                        <a class="social-icon" href="https://github.com/azaziro01-glitch" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" title="GitHub">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 .7a11.3 11.3 0 0 0-3.57 22c.57.1.77-.25.77-.55v-2.16c-3.15.68-3.81-1.34-3.81-1.34-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.66 1.24 3.31.95.1-.73.4-1.24.72-1.52-2.51-.29-5.15-1.26-5.15-5.59 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.44.11-3 0 0 .95-.3 3.11 1.16A10.8 10.8 0 0 1 12 6.06c.96 0 1.93.13 2.83.38 2.16-1.46 3.11-1.16 3.11-1.16.62 1.56.23 2.71.11 3 .73.79 1.17 1.8 1.17 3.04 0 4.34-2.65 5.3-5.17 5.58.41.35.77 1.04.77 2.1v3.12c0 .3.2.66.78.55A11.3 11.3 0 0 0 12 .7z"></path>
+                            </svg>
+                        </a>
+                        <a class="social-icon" href="mailto:agansvince@gmail.com" aria-label="Send email" title="Email">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 5h18v14H3z"></path>
+                                <path d="m3 6 9 7 9-7"></path>
+                            </svg>
+                        </a>
+                        <a class="social-icon" href="https://www.linkedin.com/in/vince-agans-50a6523a5" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9v9M6 6.5v.01M10 18v-5c0-2.5 4-2.7 4 0v5M10 9v9M2.5 2.5h19v19h-19z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal">
+                    <div class="portrait-frame">
+                        <img src="images/vincent-profile.webp" alt="Professional portrait of Vincent Agana">
+                        <div class="portrait-badge">
+                            <strong>IT + Business</strong>
+                            <span>Practical digital solutions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container split-layout">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">About Me</p>
+                    <h2>Learning technology while applying it to real ventures.</h2>
+                </div>
+
+                <div class="about-copy reveal">
+                    <p>
+                        I am pursuing a Diploma in Information Technology at the Kwame Nkrumah University of Science and
+                        Technology. My studies are helping me strengthen my knowledge of web development, programming,
+                        networking, databases and information systems.
+                    </p>
+                    <p>
+                        Beyond the classroom, I manage e-commerce activities, source handmade products from Northern Ghana
+                        and develop digital product ideas such as CookTok. These experiences help me connect technical
+                        knowledge with customer needs, business operations and local opportunities.
+                    </p>
+
+                    <div class="fact-grid">
+                        <div><strong>KNUST</strong><span>Diploma in IT</span></div>
+                        <div><strong>Ghana</strong><span>Based and building</span></div>
+                        <div><strong>4</strong><span>Portfolio ventures</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <div class="section-heading centered reveal">
+                    <p class="eyebrow">Skills</p>
+                    <h2>Developing a balanced technical and entrepreneurial skill set.</h2>
+                    <p>These bars represent my current learning confidence, not formal professional certification.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card reveal">
+                        <div class="skill-label"><span>HTML & Semantic Structure</span><strong>78%</strong></div>
+                        <div class="skill-track"><span class="skill-fill" data-level="78"></span></div>
+                    </article>
+                    <article class="skill-card reveal">
+                        <div class="skill-label"><span>CSS & Responsive Layout</span><strong>72%</strong></div>
+                        <div class="skill-track"><span class="skill-fill" data-level="72"></span></div>
+                    </article>
+                    <article class="skill-card reveal">
+                        <div class="skill-label"><span>JavaScript Fundamentals</span><strong>55%</strong></div>
+                        <div class="skill-track"><span class="skill-fill" data-level="55"></span></div>
+                    </article>
+                    <article class="skill-card reveal">
+                        <div class="skill-label"><span>React & Node.js Learning</span><strong>58%</strong></div>
+                        <div class="skill-track"><span class="skill-fill" data-level="58"></span></div>
+                    </article>
+                    <article class="skill-card reveal">
+                        <div class="skill-label"><span>Networking & IT Support</span><strong>68%</strong></div>
+                        <div class="skill-track"><span class="skill-fill" data-level="68"></span></div>
+                    </article>
+                    <article class="skill-card reveal">
+                        <div class="skill-label"><span>E-commerce Operations</span><strong>82%</strong></div>
+                        <div class="skill-track"><span class="skill-fill" data-level="82"></span></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="timeline" class="section">
+            <div class="container">
+                <div class="section-heading centered reveal">
+                    <p class="eyebrow">My Journey</p>
+                    <h2>Education, ventures and continuous growth.</h2>
+                </div>
+
+                <div class="timeline">
+                    <article class="timeline-item reveal">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-card">
+                            <span class="timeline-year">Current</span>
+                            <h3>Diploma in Information Technology — KNUST</h3>
+                            <p>Building knowledge in web development, programming, networking, databases and information systems.</p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item reveal">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-card">
+                            <span class="timeline-year">Business Venture</span>
+                            <h3>Prisvic Mothercare</h3>
+                            <p>Retailing children and mothercare products through in-store operations and online marketplaces such as Jumia Ghana.</p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item reveal">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-card">
+                            <span class="timeline-year">Local Commerce</span>
+                            <h3>Northern Ghana Artisan Sourcing</h3>
+                            <p>Exploring reliable sourcing opportunities for Bolga baskets, leather goods and calabash products for resale.</p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item reveal">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-card">
+                            <span class="timeline-year">Technology Project</span>
+                            <h3>CookTok Application</h3>
+                            <p>Developing a TikTok-style cooking video application with React, Node.js, video uploads and creator analytics.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="ventures" class="section section-alt">
+            <div class="container">
+                <div class="section-heading centered reveal">
+                    <p class="eyebrow">Selected Projects & Ventures</p>
+                    <h2>Work that reflects my interests in technology and commerce.</h2>
+                </div>
+
+                <div class="project-grid">
+                    <article class="project-card reveal">
+                        <div class="project-image-wrap">
+                            <img src="images/prisvic-mothercare.webp" alt="Children and mothercare products store serving customers in Ghana">
+                            <span class="project-tag">E-commerce</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Prisvic Mothercare</h3>
+                            <p>A children and mothercare retail venture serving customers through physical sales and Jumia Ghana.</p>
+                            <div class="project-tech"><span>Retail</span><span>Jumia</span><span>Product Listing</span></div>
+                            <a class="project-link" href="images/prisvic-mothercare.webp" target="_blank" rel="noopener noreferrer">View Project <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-image-wrap">
+                            <img src="images/artisan-sourcing.webp" alt="Bolga baskets, Ghanaian leather goods and calabash products for marketplace sourcing">
+                            <span class="project-tag">Sourcing</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Artisan Product Sourcing</h3>
+                            <p>Sourcing handmade Bolga baskets, leather goods and calabash products for local and international resale.</p>
+                            <div class="project-tech"><span>Research</span><span>Supply</span><span>Marketplaces</span></div>
+                            <a class="project-link" href="images/artisan-sourcing.webp" target="_blank" rel="noopener noreferrer">View Project <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-image-wrap">
+                            <img src="images/cooktok-app.webp" alt="CookTok cooking video application interface and creator analytics dashboard">
+                            <span class="project-tag">Web Application</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>CookTok</h3>
+                            <p>A short-form cooking video application with a scrollable feed, uploads, engagement tools and creator analytics.</p>
+                            <div class="project-tech"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+                            <a class="project-link" href="images/cooktok-app.webp" target="_blank" rel="noopener noreferrer">View Project <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-card-accent reveal">
+                        <div class="portfolio-preview" aria-hidden="true">
+                            <span>&lt;html&gt;</span>
+                            <span class="indent">&lt;portfolio&gt;</span>
+                            <span class="indent-two">Vincent Agana</span>
+                            <span class="indent">&lt;/portfolio&gt;</span>
+                            <span>&lt;/html&gt;</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Personal Portfolio Website</h3>
+                            <p>A responsive portfolio developed with semantic HTML, modern CSS and JavaScript interactions, then prepared for GitHub Pages.</p>
+                            <div class="project-tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+                            <a class="project-link" href="https://github.com/azaziro01-glitch" target="_blank" rel="noopener noreferrer">View Project <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container contact-card reveal">
+                <div>
+                    <p class="eyebrow">Contact</p>
+                    <h2>Let us connect and build something useful.</h2>
+                    <p>I am open to learning opportunities, project discussions and professional networking.</p>
+                </div>
+
+                <div class="contact-actions">
+                    <a class="btn btn-primary" href="mailto:agansvince@gmail.com">Send an Email</a>
+                    <a class="btn btn-ghost" href="https://github.com/azaziro01-glitch" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
+                </div>
+
+                <div class="contact-socials">
+                    <a href="mailto:agansvince@gmail.com">agansvince@gmail.com</a>
+                    <a href="https://github.com/azaziro01-glitch" target="_blank" rel="noopener noreferrer">@azaziro01-glitch</a>
+                    <a href="https://www.linkedin.com/in/vince-agans-50a6523a5" target="_blank" rel="noopener noreferrer">LinkedIn: Vince Agans</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-row">
+            <p>&copy; <span id="current-year">2026</span> Vincent Agana. Built with HTML, CSS and JavaScript.</p>
+            <a href="#home">Back to top ↑</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
