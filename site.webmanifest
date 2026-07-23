@@ -1,0 +1,15 @@
+{
+  "name": "Vincent Agana Portfolio",
+  "short_name": "Vincent Agana",
+  "start_url": "/portfolio/",
+  "display": "standalone",
+  "background_color": "#fffdf8",
+  "theme_color": "#173f35",
+  "icons": [
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

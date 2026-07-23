@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://azaziro01-glitch.github.io/portfolio/sitemap.xml

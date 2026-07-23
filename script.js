@@ -63,3 +63,45 @@ if ("IntersectionObserver" in window) {
         bar.style.width = `${bar.dataset.level}%`;
     });
 }
+
+
+// Animated typing effect
+const typingTarget = document.getElementById("typing-text");
+const typingPhrases = [
+    "Diploma IT Student",
+    "Web Developer",
+    "Entrepreneur"
+];
+
+if (typingTarget) {
+    let phraseIndex = 0;
+    let characterIndex = 0;
+    let deleting = false;
+
+    function typeNextCharacter() {
+        const phrase = typingPhrases[phraseIndex];
+
+        if (!deleting) {
+            characterIndex += 1;
+            typingTarget.textContent = phrase.slice(0, characterIndex);
+
+            if (characterIndex === phrase.length) {
+                deleting = true;
+                setTimeout(typeNextCharacter, 1300);
+                return;
+            }
+        } else {
+            characterIndex -= 1;
+            typingTarget.textContent = phrase.slice(0, characterIndex);
+
+            if (characterIndex === 0) {
+                deleting = false;
+                phraseIndex = (phraseIndex + 1) % typingPhrases.length;
+            }
+        }
+
+        setTimeout(typeNextCharacter, deleting ? 55 : 90);
+    }
+
+    typeNextCharacter();
+}
