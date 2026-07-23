@@ -232,3 +232,9 @@ document.querySelectorAll('a[target="_blank"]').forEach((link) => {
     indicator.textContent = " ↗";
     link.append(indicator);
 });
+
+
+// Add staggered reveal timing to newly introduced sections.
+document.querySelectorAll(".service-card, .tech-item, .learning-card").forEach((element, index) => {
+    element.style.transitionDelay = `${(index % 4) * 75}ms`;
+});

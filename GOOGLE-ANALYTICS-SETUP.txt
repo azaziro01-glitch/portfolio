@@ -1,0 +1,16 @@
+GOOGLE ANALYTICS SETUP
+
+The portfolio is ready for Google Analytics 4, but a personal Measurement ID is required.
+
+1. Sign in to Google Analytics.
+2. Create a GA4 property for:
+   https://azaziro01-glitch.github.io/portfolio/
+3. Copy the Measurement ID. It will look like:
+   G-XXXXXXXXXX
+4. Open index.html.
+5. Find the commented Google Analytics block near the end of the <head>.
+6. Replace both occurrences of G-XXXXXXXXXX with your real Measurement ID.
+7. Remove the HTML comment markers around that block.
+8. Upload the updated index.html to GitHub and commit.
+
+Analytics cannot collect data until your real Measurement ID has been added.
