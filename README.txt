@@ -36,3 +36,53 @@ Additional features added:
 Important contact-form note:
 The first FormSubmit message may trigger an activation email to agansvince@gmail.com.
 Open that email and approve the form once. After activation, future submissions should be delivered normally.
+
+
+Final version features:
+- Animated typing effect
+- Downloadable CV
+- Working GitHub statistics using GitHub's public API
+- GitHub, LinkedIn and email icons
+- Floating back-to-top button
+- Scroll progress indicator
+- Enhanced hover animations
+- Professional loading screen
+- Public visitor counter badge
+- Honest project action links with live demo only where a public demo exists
+- Optional Google Analytics placeholder
+
+Google Analytics:
+Create a GA4 property and replace G-XXXXXXXXXX in index.html with your real Measurement ID.
+Do not enable the placeholder until you have a real ID.
+
+Contact section update:
+- Email, GitHub and LinkedIn are now presented as organized icon cards.
+- The broken image-based visitor badge was replaced with a styled live counter and graceful fallback.
+
+
+PRODUCTION FINAL RELEASE
+Live site: https://azaziro01-glitch.github.io/portfolio/
+
+Included:
+- Responsive light/dark portfolio design
+- Animated typing effect
+- Downloadable PDF CV
+- Public GitHub statistics
+- Organized Email, GitHub and LinkedIn icon cards
+- Professional loading screen
+- Scroll progress indicator
+- Floating back-to-top control
+- Animated skills and scroll reveals
+- Education and venture timeline
+- Project cards with honest live-demo, preview and GitHub links
+- Certificates and transparent testimonials sections
+- FormSubmit contact form with return confirmation
+- Visitor counter with fallback
+- SEO metadata, structured data, canonical URL, robots.txt and sitemap.xml
+- Custom favicon, web manifest and branded 404 page
+- Mobile, tablet and desktop responsiveness
+- Optional Google Analytics placeholder
+
+DEPLOYMENT
+Upload every item in this folder to the root of the GitHub repository and commit.
+Do not upload the ZIP file itself.

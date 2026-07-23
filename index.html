@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Vincent Agana, a KNUST Diploma in Information Technology student, digital entrepreneur and web development learner in Ghana.">
     <meta name="theme-color" content="#173f35">
+    <meta name="portfolio-version" content="Production Final">
     <title>Vincent Agana | IT Student & Digital Entrepreneur</title>
 
     <link rel="canonical" href="https://azaziro01-glitch.github.io/portfolio/">
@@ -38,8 +39,28 @@
             }
         })();
     </script>
+    <!-- Optional Google Analytics:
+         After creating a GA4 property, replace G-XXXXXXXXXX below with your Measurement ID
+         and remove the surrounding HTML comment markers.
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){{dataLayer.push(arguments);}}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
 </head>
 <body>
+
+    <div id="page-loader" class="page-loader" role="status" aria-live="polite">
+        <div class="loader-mark" aria-hidden="true">VA</div>
+        <p>Loading Vincent Agana's portfolio…</p>
+    </div>
+    <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+    <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top" title="Back to top">↑</button>
+    <noscript><div class="noscript-note">JavaScript is disabled. The portfolio content remains available, but animations and live statistics will not run.</div></noscript>
+
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <header class="site-header">
@@ -49,7 +70,7 @@
                 <span>Vincent Agana</span>
             </a>
 
-            <nav aria-label="Main navigation">
+            <nav aria-label="Main navigation" id="main-nav">
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#timeline">Journey</a>
@@ -92,18 +113,18 @@
                     </div>
 
                     <div class="social-row" aria-label="Social links">
-                        <a class="social-icon" href="https://github.com/azaziro01-glitch" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" title="GitHub">
+                        <a class="social-icon" href="https://github.com/azaziro01-glitch" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" title="GitHub" data-social="github">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M12 .7a11.3 11.3 0 0 0-3.57 22c.57.1.77-.25.77-.55v-2.16c-3.15.68-3.81-1.34-3.81-1.34-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.66 1.24 3.31.95.1-.73.4-1.24.72-1.52-2.51-.29-5.15-1.26-5.15-5.59 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.44.11-3 0 0 .95-.3 3.11 1.16A10.8 10.8 0 0 1 12 6.06c.96 0 1.93.13 2.83.38 2.16-1.46 3.11-1.16 3.11-1.16.62 1.56.23 2.71.11 3 .73.79 1.17 1.8 1.17 3.04 0 4.34-2.65 5.3-5.17 5.58.41.35.77 1.04.77 2.1v3.12c0 .3.2.66.78.55A11.3 11.3 0 0 0 12 .7z"></path>
                             </svg>
                         </a>
-                        <a class="social-icon" href="mailto:agansvince@gmail.com" aria-label="Send email" title="Email">
+                        <a class="social-icon" href="mailto:agansvince@gmail.com" aria-label="Send email" title="Email" data-social="email">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M3 5h18v14H3z"></path>
                                 <path d="m3 6 9 7 9-7"></path>
                             </svg>
                         </a>
-                        <a class="social-icon" href="https://www.linkedin.com/in/vince-agans-50a6523a5" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" title="LinkedIn">
+                        <a class="social-icon" href="https://www.linkedin.com/in/vince-agans-50a6523a5" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" title="LinkedIn" data-social="linkedin">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M6 9v9M6 6.5v.01M10 18v-5c0-2.5 4-2.7 4 0v5M10 9v9M2.5 2.5h19v19h-19z"></path>
                             </svg>
@@ -252,7 +273,10 @@
                             <h3>Prisvic Mothercare</h3>
                             <p>A children and mothercare retail venture serving customers through physical sales and Jumia Ghana.</p>
                             <div class="project-tech"><span>Retail</span><span>Jumia</span><span>Product Listing</span></div>
-                            <a class="project-link" href="images/prisvic-mothercare.webp" target="_blank" rel="noopener noreferrer">View Project <span aria-hidden="true">↗</span></a>
+                            <div class="project-actions">
+                                <a class="project-link" href="images/prisvic-mothercare.webp" target="_blank" rel="noopener noreferrer">View Showcase ↗</a>
+                                <span class="project-status">Live demo not public</span>
+                            </div>
                         </div>
                     </article>
 
@@ -265,7 +289,10 @@
                             <h3>Artisan Product Sourcing</h3>
                             <p>Sourcing handmade Bolga baskets, leather goods and calabash products for local and international resale.</p>
                             <div class="project-tech"><span>Research</span><span>Supply</span><span>Marketplaces</span></div>
-                            <a class="project-link" href="images/artisan-sourcing.webp" target="_blank" rel="noopener noreferrer">View Project <span aria-hidden="true">↗</span></a>
+                            <div class="project-actions">
+                                <a class="project-link" href="images/artisan-sourcing.webp" target="_blank" rel="noopener noreferrer">View Showcase ↗</a>
+                                <span class="project-status">Live demo not public</span>
+                            </div>
                         </div>
                     </article>
 
@@ -278,7 +305,10 @@
                             <h3>CookTok</h3>
                             <p>A short-form cooking video application with a scrollable feed, uploads, engagement tools and creator analytics.</p>
                             <div class="project-tech"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
-                            <a class="project-link" href="images/cooktok-app.webp" target="_blank" rel="noopener noreferrer">View Project <span aria-hidden="true">↗</span></a>
+                            <div class="project-actions">
+                                <a class="project-link" href="images/cooktok-app.webp" target="_blank" rel="noopener noreferrer">View App Preview ↗</a>
+                                <a class="project-link project-link-secondary" href="https://github.com/azaziro01-glitch" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                            </div>
                         </div>
                     </article>
 
@@ -294,7 +324,10 @@
                             <h3>Personal Portfolio Website</h3>
                             <p>A responsive portfolio developed with semantic HTML, modern CSS and JavaScript interactions, then prepared for GitHub Pages.</p>
                             <div class="project-tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
-                            <a class="project-link" href="https://github.com/azaziro01-glitch" target="_blank" rel="noopener noreferrer">View Project <span aria-hidden="true">↗</span></a>
+                            <div class="project-actions">
+                                <a class="project-link" href="https://azaziro01-glitch.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+                                <a class="project-link project-link-secondary" href="https://github.com/azaziro01-glitch" target="_blank" rel="noopener noreferrer">Source/Profile ↗</a>
+                            </div>
                         </div>
                     </article>
                 </div>
@@ -302,20 +335,48 @@
         </section>
 
 
+        
         <section id="github-stats" class="section">
             <div class="container">
                 <div class="section-heading centered reveal">
                     <p class="eyebrow">GitHub Activity</p>
                     <h2>Learning in public and building project experience.</h2>
-                    <p>These cards update automatically from my public GitHub activity.</p>
+                    <p>Statistics below are loaded from my public GitHub profile.</p>
                 </div>
-                <div class="github-stats-grid">
-                    <img class="github-stat-card reveal" loading="lazy" decoding="async"
-                         src="https://github-readme-stats.vercel.app/api?username=azaziro01-glitch&show_icons=true&hide_border=true&theme=transparent"
-                         alt="Vincent Agana GitHub statistics">
-                    <img class="github-stat-card reveal" loading="lazy" decoding="async"
-                         src="https://github-readme-stats.vercel.app/api/top-langs/?username=azaziro01-glitch&layout=compact&hide_border=true&theme=transparent"
-                         alt="Most used programming languages on Vincent Agana's GitHub profile">
+
+                <div class="github-api-grid" id="github-api-grid" aria-live="polite">
+                    <article class="github-api-card reveal">
+                        <span class="github-api-label">Public repositories</span>
+                        <strong id="github-repos">—</strong>
+                        <small>Projects available publicly</small>
+                    </article>
+                    <article class="github-api-card reveal">
+                        <span class="github-api-label">Followers</span>
+                        <strong id="github-followers">—</strong>
+                        <small>GitHub community connections</small>
+                    </article>
+                    <article class="github-api-card reveal">
+                        <span class="github-api-label">Following</span>
+                        <strong id="github-following">—</strong>
+                        <small>Developers and projects followed</small>
+                    </article>
+                    <article class="github-api-card reveal">
+                        <span class="github-api-label">Account since</span>
+                        <strong id="github-since">—</strong>
+                        <small>Public GitHub profile age</small>
+                    </article>
+                </div>
+
+                <div class="github-featured reveal" id="github-featured">
+                    <div>
+                        <p class="eyebrow">Featured Repository</p>
+                        <h3 id="featured-repo-name">Portfolio</h3>
+                        <p id="featured-repo-description">Responsive personal portfolio developed with HTML, CSS and JavaScript.</p>
+                    </div>
+                    <div class="github-featured-actions">
+                        <a class="btn btn-primary" href="https://github.com/azaziro01-glitch" target="_blank" rel="noopener noreferrer">View GitHub Profile</a>
+                        <a class="btn btn-ghost" href="https://azaziro01-glitch.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Live Portfolio</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -380,10 +441,44 @@
                         <a class="btn btn-primary" href="mailto:agansvince@gmail.com">Send an Email</a>
                         <a class="btn btn-ghost" href="https://github.com/azaziro01-glitch" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
                     </div>
-                    <div class="contact-socials">
-                        <a href="mailto:agansvince@gmail.com">agansvince@gmail.com</a>
-                        <a href="https://github.com/azaziro01-glitch" target="_blank" rel="noopener noreferrer">@azaziro01-glitch</a>
-                        <a href="https://www.linkedin.com/in/vince-agans-50a6523a5" target="_blank" rel="noopener noreferrer">LinkedIn: Vince Agans</a>
+                    <div class="contact-socials" aria-label="Contact and social links">
+                        <a class="contact-social-item" href="mailto:agansvince@gmail.com">
+                            <span class="contact-social-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                                    <path d="m3 7 9 6 9-6"></path>
+                                </svg>
+                            </span>
+                            <span class="contact-social-copy">
+                                <small>Email</small>
+                                <strong>agansvince@gmail.com</strong>
+                            </span>
+                        </a>
+
+                        <a class="contact-social-item" href="https://github.com/azaziro01-glitch" target="_blank" rel="noopener noreferrer">
+                            <span class="contact-social-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" class="github-contact-icon">
+                                    <path d="M12 .8A11.2 11.2 0 0 0 8.46 22.62c.56.1.77-.24.77-.54v-2.15c-3.14.68-3.8-1.33-3.8-1.33-.51-1.31-1.25-1.66-1.25-1.66-1.03-.7.08-.68.08-.68 1.13.08 1.73 1.16 1.73 1.16 1.01 1.73 2.65 1.23 3.3.94.1-.73.39-1.23.71-1.51-2.5-.29-5.13-1.25-5.13-5.57 0-1.23.44-2.24 1.16-3.03-.11-.28-.5-1.43.11-2.99 0 0 .95-.3 3.1 1.16A10.75 10.75 0 0 1 12 6.13c.96 0 1.92.13 2.82.38 2.15-1.46 3.1-1.16 3.1-1.16.61 1.56.22 2.71.11 2.99.72.79 1.16 1.8 1.16 3.03 0 4.33-2.64 5.28-5.15 5.56.4.35.76 1.03.76 2.09v3.11c0 .3.21.65.78.54A11.2 11.2 0 0 0 12 .8z"></path>
+                                </svg>
+                            </span>
+                            <span class="contact-social-copy">
+                                <small>GitHub</small>
+                                <strong>@azaziro01-glitch</strong>
+                            </span>
+                        </a>
+
+                        <a class="contact-social-item" href="https://www.linkedin.com/in/vince-agans-50a6523a5" target="_blank" rel="noopener noreferrer">
+                            <span class="contact-social-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                                    <path d="M7.5 10v7M7.5 7.5v.01M11 17v-4c0-2 3.5-2.2 3.5 0v4M11 10v7"></path>
+                                </svg>
+                            </span>
+                            <span class="contact-social-copy">
+                                <small>LinkedIn</small>
+                                <strong>Vince Agans</strong>
+                            </span>
+                        </a>
                     </div>
                 </div>
 
@@ -391,6 +486,7 @@
                     <input type="hidden" name="_subject" value="New portfolio contact message">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://azaziro01-glitch.github.io/portfolio/?message=sent#contact">
                     <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off">
                     <div class="form-row">
                         <label for="name">Name</label>
@@ -417,7 +513,16 @@
 
     <footer class="site-footer">
         <div class="container footer-row">
-            <p>&copy; <span id="current-year">2026</span> Vincent Agana. Built with HTML, CSS and JavaScript.</p>
+            <div class="footer-credit">
+                <p>&copy; <span id="current-year">2026</span> Vincent Agana. Built with HTML, CSS and JavaScript.</p>
+                <span class="visitor-counter" id="visitor-counter" aria-live="polite">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z"></path>
+                        <circle cx="12" cy="12" r="2.7"></circle>
+                    </svg>
+                    <span><strong id="visitor-count">—</strong> visitors</span>
+                </span>
+            </div>
             <a href="#home">Back to top ↑</a>
         </div>
     </footer>

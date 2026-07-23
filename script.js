@@ -105,3 +105,130 @@ if (typingTarget) {
 
     typeNextCharacter();
 }
+
+
+// Final portfolio interactions
+const loader = document.getElementById("page-loader");
+const progressBar = document.getElementById("scroll-progress");
+const backToTop = document.getElementById("back-to-top");
+
+window.addEventListener("load", () => {
+    window.setTimeout(() => {
+        loader?.classList.add("is-hidden");
+    }, 280);
+});
+
+function updateScrollUI() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+
+    if (progressBar) progressBar.style.width = `${progress}%`;
+
+    if (backToTop) {
+        backToTop.classList.toggle("is-visible", scrollTop > 520);
+    }
+}
+
+window.addEventListener("scroll", updateScrollUI, { passive: true });
+updateScrollUI();
+
+backToTop?.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Load public GitHub profile statistics from GitHub's official API.
+async function loadGitHubStats() {
+    const repoCount = document.getElementById("github-repos");
+    const followers = document.getElementById("github-followers");
+    const following = document.getElementById("github-following");
+    const since = document.getElementById("github-since");
+
+    try {
+        const response = await fetch("https://api.github.com/users/azaziro01-glitch", {
+            headers: { "Accept": "application/vnd.github+json" }
+        });
+
+        if (!response.ok) throw new Error(`GitHub API returned ${response.status}`);
+
+        const profile = await response.json();
+        if (repoCount) repoCount.textContent = profile.public_repos ?? "0";
+        if (followers) followers.textContent = profile.followers ?? "0";
+        if (following) following.textContent = profile.following ?? "0";
+        if (since && profile.created_at) {
+            since.textContent = new Date(profile.created_at).getFullYear();
+        }
+    } catch (error) {
+        console.warn("GitHub statistics could not be loaded:", error);
+        if (repoCount) repoCount.textContent = "View";
+        if (followers) followers.textContent = "GitHub";
+        if (following) following.textContent = "Profile";
+        if (since) since.textContent = "↗";
+    }
+}
+
+loadGitHubStats();
+
+
+// Visitor counter with a graceful fallback.
+// The count is requested from CounterAPI; the text remains readable if the service is unavailable.
+async function updateVisitorCounter() {
+    const countElement = document.getElementById("visitor-count");
+    if (!countElement) return;
+
+    try {
+        const response = await fetch("https://api.counterapi.dev/v1/vincent-agana/portfolio/up");
+        if (!response.ok) throw new Error(`Counter service returned ${response.status}`);
+        const data = await response.json();
+        countElement.textContent = data.count ?? data.value ?? "1";
+    } catch (error) {
+        console.warn("Visitor counter could not be loaded:", error);
+        countElement.textContent = "Welcome";
+    }
+}
+
+updateVisitorCounter();
+
+
+// Highlight the navigation link for the section currently in view.
+const navLinks = Array.from(document.querySelectorAll('#main-nav a[href^="#"]'));
+const observedSections = navLinks
+    .map((link) => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
+
+if ("IntersectionObserver" in window && observedSections.length) {
+    const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const activeHref = `#${entry.target.id}`;
+            navLinks.forEach((link) => {
+                link.classList.toggle("is-active", link.getAttribute("href") === activeHref);
+            });
+        });
+    }, { rootMargin: "-35% 0px -55% 0px", threshold: 0 });
+
+    observedSections.forEach((section) => navObserver.observe(section));
+}
+
+// Display a success note after FormSubmit redirects back.
+const query = new URLSearchParams(window.location.search);
+if (query.get("message") === "sent") {
+    const contactForm = document.querySelector(".contact-form");
+    if (contactForm) {
+        const success = document.createElement("p");
+        success.className = "form-success";
+        success.textContent = "Thank you. Your message has been submitted successfully.";
+        contactForm.prepend(success);
+    }
+    window.history.replaceState({}, document.title, `${window.location.pathname}${window.location.hash || "#contact"}`);
+}
+
+// Mark external links visually while preserving accessible text.
+document.querySelectorAll('a[target="_blank"]').forEach((link) => {
+    if (link.querySelector(".external-indicator")) return;
+    const indicator = document.createElement("span");
+    indicator.className = "external-indicator";
+    indicator.setAttribute("aria-hidden", "true");
+    indicator.textContent = " ↗";
+    link.append(indicator);
+});
