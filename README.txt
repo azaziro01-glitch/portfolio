@@ -96,3 +96,8 @@ SIGNATURE FINAL UPGRADE
 - Smooth light/dark transitions
 - Optimized WebP portrait and existing project images
 - Google Analytics setup guide included
+
+PHOTO FIX RELEASE
+- Includes vincent-profile-clean.webp in the images folder.
+- index.html now references images/vincent-profile-clean.webp.
+- Upload all files and the entire images folder to GitHub.
